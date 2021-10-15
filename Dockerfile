@@ -1,2 +1,3 @@
 FROM tomcat:8
-COPY /home/app/target/*SampleWebApp.war /usr/local/tomcat/webapps/
+ARG war_FILE=/home/app/target/*SampleWebApp.war
+COPY ${war_FILE} /usr/local/tomcat/webapps/
